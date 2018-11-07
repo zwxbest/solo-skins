@@ -84,7 +84,7 @@
 
             <div class="item__date--m fn__none">
                 <i class="icon__date"></i>
-            ${article.articleCreateDate?string("yyy-MM-DD")}
+            ${article.articleCreateDate?string("yyyy-MM-dd")}
             </div>
 
             <div class="ft__center">
