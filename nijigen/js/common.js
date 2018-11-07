@@ -26,7 +26,45 @@
  * @description 皮肤脚本
  * @static
  */
+
+
+
 var Skin = {
+
+  /**
+   * @description 获取当前光标最后位置
+   * @param {Dom} textarea 评论框对象
+   * @returns {Num} 光标位置
+   */
+  _getCursorEndPosition: function (textarea) {
+    textarea.focus();
+    if (textarea.setSelectionRange) { // W3C
+      return textarea.selectionEnd;
+    } else if (document.selection) { // IE
+      var i = 0,
+          oS = document.selection.createRange(),
+          oR = document.body.createTextRange();
+      oR.moveToElementText(textarea);
+      oS.getBookmark();
+      for (i = 0; oR.compareEndPoints('StartToStart', oS) < 0 && oS.moveStart("character", -1) !== 0; i++) {
+        if (textarea.value.charAt(i) === '\n') {
+          i++;
+        }
+      }
+      return i;
+    }
+  },
+  _addCommentEmotion:function () {
+    var _it = this;
+    $("#custom_emotions>span").click(function () {
+      var $comment = $("#comment");
+      var endPosition = _it._getCursorEndPosition($comment[0]);
+      var imageUrl = "!["+$(this).attr("title")+"]("+document.location.protocol +"//"+location.host + $(this).find("img").attr("src")+")",
+          textValue = $comment[0].value;
+      textValue = textValue.substring(0, endPosition) + imageUrl + textValue.substring(endPosition, textValue.length);
+      $("#comment").val(textValue);
+    });
+  },
   _initCommon: function ($goTop) {
     $(window).scroll(function () {
       if ($(window).scrollTop() > 125) {
@@ -106,9 +144,10 @@ var Skin = {
       $('.side .module:eq(0) .module__list').html($('.b3-solo-list'))
     }
   },
-  initArticle: function () {
+   initArticle: function () {
     this._initArticleCommon()
-
+    window.scroll(window.scrollX,0);
+     this._addCommentEmotion();
     setTimeout(function () {
       if ($('#externalRelevantArticlesWrap li').length === 0) {
         $('#externalRelevantArticlesWrap').next().remove()

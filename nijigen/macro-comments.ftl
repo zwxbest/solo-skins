@@ -54,22 +54,25 @@
             </tr>
             </#if>
             <tr>
-                <td id="emotions" class="emotions">
-                    <span class="em00" title="${em00Label}"></span>
-                    <span class="em01" title="${em01Label}"></span>
-                    <span class="em02" title="${em02Label}"></span>
-                    <span class="em03" title="${em03Label}"></span>
-                    <span class="em04" title="${em04Label}"></span>
-                    <span class="em05" title="${em05Label}"></span>
-                    <span class="em06" title="${em06Label}"></span>
-                    <span class="em07" title="${em07Label}"></span>
-                    <span class="em08" title="${em08Label}"></span>
-                    <span class="em09" title="${em09Label}"></span>
-                    <span class="em10" title="${em10Label}"></span>
-                    <span class="em11" title="${em11Label}"></span>
-                    <span class="em12" title="${em12Label}"></span>
-                    <span class="em13" title="${em13Label}"></span>
-                    <span class="em14" title="${em14Label}"></span>
+                <td id="custom_emotions" class="emotions">
+                    <span class="em00" title="${em00Title}"><img src="/skins/nijigen/images/emotions/${em00Name}" alt="${em00Title}"/></span>
+                    <span class="em01" title="${em01Title}"><img src="/skins/nijigen/images/emotions/${em01Name}" alt="${em01Title}"/></span>
+                    <span class="em02" title="${em02Title}"><img src="/skins/nijigen/images/emotions/${em02Name}" alt="${em02Title}"/></span>
+                    <span class="em03" title="${em03Title}"><img src="/skins/nijigen/images/emotions/${em03Name}" alt="${em03Title}"/></span>
+                    <span class="em04" title="${em04Title}"><img src="/skins/nijigen/images/emotions/${em04Name}" alt="${em04Title}"/></span>
+                    <span class="em05" title="${em05Title}"><img src="/skins/nijigen/images/emotions/${em05Name}" alt="${em05Title}"/></span>
+                    <span class="em06" title="${em06Title}"><img src="/skins/nijigen/images/emotions/${em06Name}" alt="${em06Title}"/></span>
+                    <span class="em07" title="${em07Title}"><img src="/skins/nijigen/images/emotions/${em07Name}" alt="${em07Title}"/></span>
+                    <span class="em08" title="${em08Title}"><img src="/skins/nijigen/images/emotions/${em08Name}" alt="${em08Title}"/></span>
+                    <span class="em09" title="${em09Title}"><img src="/skins/nijigen/images/emotions/${em09Name}" alt="${em09Title}"/></span>
+                    <span class="em10" title="${em10Title}"><img src="/skins/nijigen/images/emotions/${em10Name}" alt="${em10Title}"/></span>
+                    <span class="em11" title="${em11Title}"><img src="/skins/nijigen/images/emotions/${em11Name}" alt="${em11Title}"/></span>
+                    <span class="em12" title="${em12Title}"><img src="/skins/nijigen/images/emotions/${em12Name}" alt="${em12Title}"/></span>
+                    <span class="em13" title="${em13Title}"><img src="/skins/nijigen/images/emotions/${em13Name}" alt="${em13Title}"/></span>
+                    <span class="em14" title="${em14Title}"><img src="/skins/nijigen/images/emotions/${em14Name}" alt="${em14Title}"/></span>
+                    <span class="em15" title="${em15Title}"><img src="/skins/nijigen/images/emotions/${em15Name}" alt="${em15Title}"/></span>
+
+
                 </td>
             </tr>
             <tr>

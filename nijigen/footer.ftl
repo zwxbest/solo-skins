@@ -63,6 +63,6 @@
     };
 
     Util.parseMarkdown('content-reset');
-    Util.killIE(8)
+
 </script>
 ${plugins}

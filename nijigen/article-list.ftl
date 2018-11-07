@@ -63,7 +63,7 @@
         </div>
 
         <div class="content-reset">
-            ${article.articleAbstract}
+            ${article.articleAbstractHtml}
         </div>
     </article>
     </#list>

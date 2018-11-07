@@ -21,10 +21,11 @@
 <#include "macro-comments.ftl">
 <!DOCTYPE html>
 <html>
+
 <head>
     <@head title="${article.articleTitle} - ${blogTitle}">
     <meta name="keywords" content="${article.articleTags}"/>
-    <meta name="description" content="${article.articleAbstract?html}"/>
+    <meta name="description" content="${article.articleAbstractHtml?html}"/>
     </@head>
     <#if previousArticlePermalink??>
         <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
@@ -36,26 +37,29 @@
     <meta property="og:locale" content="zh_CN"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="${article.articleTitle}"/>
-    <meta property="og:description" content="${article.articleAbstract?html}"/>
+    <meta property="og:description" content="${article.articleAbstractHtml?html}"/>
     <meta property="og:image" content="${article.authorThumbnailURL}"/>
     <meta property="og:url" content="${servePath}${article.articlePermalink}"/>
     <meta property="og:site_name" content="Solo"/>
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="${article.articleAbstract?html}"/>
+    <meta name="twitter:description" content="${article.articleAbstractHtml?html}"/>
     <meta name="twitter:title" content="${article.articleTitle}"/>
     <meta name="twitter:image" content="${article.authorThumbnailURL}"/>
     <meta name="twitter:url" content="${servePath}${article.articlePermalink}"/>
     <meta name="twitter:site" content="@DL88250"/>
     <meta name="twitter:creator" content="@DL88250"/>
 </head>
-<body>
+<body >
+
+
+
 <#include "header.ftl">
-<div class="main">
+<div class="main" >
     <div id="pjax" class="content">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <main class="article-list" id="articlePage">
-        <div class="item item--active">
+           <div class="item item--active">
             <time class="tooltipped tooltipped__n item__date"
                   aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
             ${article.articleCreateDate?string("MM")}${monthLabel}
@@ -97,14 +101,24 @@
                 </span>
             </div>
 
+
             <div class="content-reset">
-            ${article.articleContent}
+            ${article.articleContentHtml}
                 <#if "" != article.articleSign.signHTML?trim>
                 <div>
                     ${article.articleSign.signHTML}
                 </div>
                 </#if>
             </div>
+            <#if isLoggedIn>
+            <div align="right">
+                    <span>
+                                <i class="icon__pencil" onclick= "window.location='/admin-index.do#article/article';
+                                                                  window.sessionStorage.article_id = '${article.oId}';
+                                                                  window.sessionStorage.is_article = 'true';"></i>
+                            </span>
+                </div>
+                </#if>
         </div>
 
         <#if previousArticlePermalink?? || nextArticlePermalink??>
@@ -150,7 +164,9 @@
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
     <#include "side.ftl">
+
 </div>
+<script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId>
@@ -170,3 +186,5 @@ page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as arti
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
+
+

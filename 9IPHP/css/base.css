@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.0.0, Oct 27, 2018
+ * @version 0.3.9.9, Sep 21 2017
 */
 /* start common */
 html {
@@ -721,10 +721,6 @@ a {
     color: #aaa;
 }
 
-.ft-center {
-    text-align: center;
-}
-
 .list,
 .module main.list {
     padding: 0;
@@ -1007,7 +1003,7 @@ aside.has-toc > section:last-child {
 }
 
 .post h1 a {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 500;
     text-decoration: none;
 }

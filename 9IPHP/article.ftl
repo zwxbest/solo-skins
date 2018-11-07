@@ -24,7 +24,7 @@
     <head>
         <@head title="${article.articleTitle} - ${blogTitle}">
         <meta name="keywords" content="${article.articleTags}" />
-        <meta name="description" content="${article.articleAbstract?html}" />
+        <meta name="description" content="${article.articleAbstractHtml?html}" />
         </@head>
         <#if previousArticlePermalink??>
             <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
@@ -36,7 +36,7 @@
             <meta property="og:locale" content="zh_CN"/>
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="${article.articleTitle}"/>
-            <meta property="og:description" content="${article.articleAbstract?html}"/>
+            <meta property="og:description" content="${article.articleAbstractHtml?html}"/>
             <meta property="og:image" content="${article.authorThumbnailURL}"/>
             <meta property="og:url" content="${servePath}${article.articlePermalink}"/>
             <meta property="og:site_name" content="Solo"/>
@@ -93,7 +93,7 @@
                         </header>
 
                         <div class="content-reset">
-                            ${article.articleContent}
+                            ${article.articleContentHtml}
                             <#if "" != article.articleSign.signHTML?trim>
                                 <div>
                                     ${article.articleSign.signHTML}

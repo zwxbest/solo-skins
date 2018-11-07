@@ -47,9 +47,6 @@
             <a rel="archive" href="${servePath}/links.html">
                 <i class="icon__link"></i> ${linkLabel}
             </a>
-            <a rel="alternate" href="${servePath}/rss.xml" rel="section">
-                <i class="icon__rss"></i> RSS
-            </a>
         </nav>
 
         <div class="header__login">

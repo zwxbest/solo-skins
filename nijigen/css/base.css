@@ -111,8 +111,17 @@ sup {
 sub {
   bottom: -0.25em; }
 
+.comments__content img{
+  max-width: 150px;
+  max-height: 150px;
+}
+#custom_emotions img{
+  max-width: 100%;
+  max-height: 100%;
+}
 img {
   max-width: 100%;
+  max-height: 100%;
   vertical-align: middle;
   border: 0;
   height: auto;
@@ -515,14 +524,13 @@ blockquote {
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</ta>
  * @version 0.1.0.0, Sep 1, 2018
  */
-.em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, .em10, .em11, .em12, .em13, .em14 {
+.em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, .em10, .em11, .em12, .em13, .em14,.em15 {
   cursor: pointer;
-  background-image: url(../../../images/emotions/emotions.png);
-  background-size: 120px;
+  /*background-image: url(../../../images/emotions/emotions.png);*/
   float: left;
-  height: 24px;
+  height: 100px;
   margin-right: 5px;
-  width: 24px;
+  width: 100px;
   transition: all .2s ease-out;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out; }
@@ -532,47 +540,47 @@ blockquote {
   -webkit-transform: scale(1.2) rotate(360deg);
   -moz-transform: scale(1.2) rotate(360deg); }
 
-.em01 {
-  background-position: -24px 0; }
+/*.em01 {*/
+  /*background-image: url(../images/emotions/bug改完了吗.jpg);}*/
 
-.em02 {
-  background-position: -48px 0; }
+/*.em02 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg); }*/
 
-.em03 {
-  background-position: -72px 0; }
+/*.em03 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em04 {
-  background-position: -96px 0; }
+/*.em04 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em05 {
-  background-position: 0 -24px; }
+/*.em05 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em06 {
-  background-position: -24px -24px; }
+/*.em06 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em07 {
-  background-position: -48px -24px; }
+/*.em07 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em08 {
-  background-position: -72px -24px; }
+/*.em08 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em09 {
-  background-position: -96px -24px; }
+/*.em09 {*/
+  /*background-image: url(../images/emotions/搬砖.jpg);  }*/
 
-.em10 {
-  background-position: 0 -48px; }
+/*.em10 {*/
+  /*background-position: 0 -48px; }*/
 
-.em11 {
-  background-position: -24px -48px; }
+/*.em11 {*/
+  /*background-position: -24px -48px; }*/
 
-.em12 {
-  background-position: -48px -48px; }
+/*.em12 {*/
+  /*background-position: -48px -48px; }*/
 
-.em13 {
-  background-position: -72px -48px; }
+/*.em13 {*/
+  /*background-position: -72px -48px; }*/
 
-.em14 {
-  background-position: -96px -48px; }
+/*.em14 {*/
+  /*background-position: -96px -48px; }*/
 
 /* Make clicks pass-through */
 #nprogress {
@@ -699,6 +707,9 @@ blockquote {
 
 .icon__tags:before {
   content: "\f02c"; }
+
+.icon__pencil:before {
+  content: "\e906"; }
 
 .icon__link:before {
   content: "\f0c1"; }
@@ -974,17 +985,17 @@ a {
     position: absolute;
     background-color: #7266BA;
     color: #fff;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     font-size: 12px;
     top: -20px;
-    border-radius: 35px;
+    border-radius: 25px;
     left: -20px;
     text-align: center;
     padding-top: 9px;
     box-sizing: border-box; }
   .article-list .item__day {
-    font-size: 30px;
+    font-size: 12px;
     display: block; }
 
 .pagination__item {
