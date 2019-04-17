@@ -1,4 +1,4 @@
-<#--
+#--
 
     Solo - A small and beautiful blogging system written in Java.
     Copyright (c) 2010-2018, b3log.org & hacpai.com
