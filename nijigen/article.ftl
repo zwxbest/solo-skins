@@ -102,6 +102,15 @@
                     <i class="icon__views"></i>
                 ${article.articleViewCount} ${viewLabel}
                 </span>
+                <#if isLoggedIn>
+               <span class="tag">
+                 <i class="icon__pencil" onclick= "window.location='/admin-index.do#article/article';
+                                                                                  window.sessionStorage.article_id = '${article.oId}';
+                                                                                  window.sessionStorage.is_article = 'true';">
+                                                                                  编辑
+                                                                                  </i>
+                </span>
+                </#if>
             </div>
 
 
