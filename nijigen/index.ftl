@@ -33,6 +33,7 @@
 <body>
 <#include "header.ftl">
 <div class="main">
+    <#include "side.ftl">
     <div id="pjax" class="content">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <main>
@@ -40,7 +41,7 @@
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-    <#include "side.ftl">
+
 </div>
 <#include "footer.ftl">
 </body>

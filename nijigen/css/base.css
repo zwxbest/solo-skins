@@ -895,7 +895,7 @@ a {
 .side {
   width: 280px;
   min-width: 280px;
-  margin-left: 30px; }
+  margin-right: 30px; }
   .side__btn {
     background-color: transparent;
     border: 0;
