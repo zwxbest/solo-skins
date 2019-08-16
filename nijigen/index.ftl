@@ -33,15 +33,23 @@
 <body>
 <#include "header.ftl">
 <div class="main">
-    <#include "side.ftl">
+
     <div id="pjax" class="content">
+        <section class="module">
+            <header class="module__header">
+                <form class="form" action="${servePath}/search">
+                    <input placeholder="${searchLabel}" class="form__input" type="text" name="keyword"/>
+                    <button class="side__btn" type="submit"><i class="icon__search"></i></button>
+                </form>
+            </header>
+        </section>
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <main>
     <#include "article-list.ftl">
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-
+    <#include "side.ftl">
 </div>
 <#include "footer.ftl">
 </body>
