@@ -57,7 +57,11 @@
 <#include "header.ftl">
 <div class="main" >
     <div id="pjax" class="content">
-    <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <#if pjax><!---- pjax {#pjax} start ---->
+          <script>
+            Util.parseMarkdown('content-reset');
+          </script>
+    </#if>
     <main class="article-list" id="articlePage">
            <div class="item item--active">
             <time class="tooltipped tooltipped__n item__date"
@@ -198,5 +202,3 @@ page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as arti
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
-
-
