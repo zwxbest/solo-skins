@@ -70,9 +70,9 @@
             name: '.name'
         }
     })
-    $('.tags').isotope({
-        sortBy: 'name',
-    })
+    // $('.tags').isotope({
+    //     sortBy: 'name',
+    // })
 </script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
